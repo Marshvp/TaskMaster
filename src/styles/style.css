@@ -25,10 +25,19 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: repeat(1fr);
+    grid-template-rows: 0.25fr;
     text-align: center;
 }
 
+.sidebar ul li {
+    display: grid;
+    grid-template-rows: repeat(auto);
+    padding: 1em;
+}
+
+.sidebar ul li button {
+    margin-top: 1em;
+}
 
 .header, .content{
     grid-column: 2 / 3;

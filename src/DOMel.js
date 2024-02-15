@@ -26,29 +26,25 @@ function createSidebar() {
     sidebar.className = 'sidebar';
 
     //create UL and home button
-    const proUL = document.createElement('ul');
+    const mainUL = document.createElement('ul');
     const homeLI = document.createElement('li');
     const homeBtn = document.createElement('button');
 
     homeLI.textContent = 'Home'
     homeBtn.innerHTML = 'Home'
 
-    // create add Project Button
-    const addProLI = document.createElement('li');
-    // connect all LI into the UL
-    homeLI.appendChild(homeBtn)
-    proUL.appendChild(homeLI)
-    proUL.appendChild(addProLI)
-    sidebar.appendChild(proUL)
-
-
-
-    // add project button
+    // create project button
     const addButton = document.createElement('button');
     addButton.textContent = 'Add Project';
     addButton.type = 'button'
     addButton.id = 'addProjectBtn';
-    addProLI.appendChild(addButton)
+
+    // connect all LI into the UL
+    homeLI.appendChild(homeBtn)
+    mainUL.appendChild(homeLI)
+    homeLI.appendChild(addButton)
+    sidebar.appendChild(mainUL)
+    
     return sidebar;
 }
 // create header
