@@ -1,22 +1,32 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-MediumItalic.ttf);
+    font-weight: 600;
+}
+
 
 body {
     padding: 0;
     margin: 0;
     color: red;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 7fr;
     grid-template-rows: 1fr 6fr;
-    height: 100vh;
+    height: 100%;
     
 }
 
 .sidebar {
     grid-row: 1 / 3;
     border: 1px solid black;
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.788);
+    display: grid;
+    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar ul {
@@ -24,8 +34,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-rows: 0.25fr;
     text-align: center;
 }
 
@@ -37,6 +45,16 @@ body {
 
 .sidebar ul li button {
     margin-top: 1em;
+}
+
+.projectSideDiv {
+    text-align: center;
+    overflow:hidden;
+}
+
+.projectSideDiv ul {
+    margin: 0;
+    padding: 0;
 }
 
 .header, .content{

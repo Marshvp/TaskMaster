@@ -1,4 +1,5 @@
 import { proFormSubmission } from "./createLogic";
+import { createSidebar } from "./sidebar";
 
 export default function buildDOM() {
     // create container
@@ -11,8 +12,8 @@ export default function buildDOM() {
 
     container.append(sidebar, header, content);
 
-    const addProjectBtn = sidebar.querySelector('#addProjectBtn');
-    addProjectBtn.addEventListener('click', () => {
+    const newProjectBtn = sidebar.querySelector('#newProjectBtn');
+    newProjectBtn.addEventListener('click', () => {
         content.innerHTML = '';
         const form = proForm();
         content.appendChild(form)
@@ -20,33 +21,7 @@ export default function buildDOM() {
     
     return container;
 }
-// create sidebar
-function createSidebar() {
-    const sidebar = document.createElement('div');
-    sidebar.className = 'sidebar';
 
-    //create UL and home button
-    const mainUL = document.createElement('ul');
-    const homeLI = document.createElement('li');
-    const homeBtn = document.createElement('button');
-
-    homeLI.textContent = 'Home'
-    homeBtn.innerHTML = 'Home'
-
-    // create project button
-    const addButton = document.createElement('button');
-    addButton.textContent = 'Add Project';
-    addButton.type = 'button'
-    addButton.id = 'addProjectBtn';
-
-    // connect all LI into the UL
-    homeLI.appendChild(homeBtn)
-    mainUL.appendChild(homeLI)
-    homeLI.appendChild(addButton)
-    sidebar.appendChild(mainUL)
-    
-    return sidebar;
-}
 // create header
 function createHeader() {
     const header = document.createElement('div');

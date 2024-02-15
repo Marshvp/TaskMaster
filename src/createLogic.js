@@ -1,4 +1,5 @@
 import { Projects } from "./classes";
+import { addProjectToSidebar } from "./sidebar";
 
 export function proFormSubmission(formElement, onSuccess) {
     formElement.addEventListener('submit', function(event) {
@@ -22,6 +23,10 @@ export function proFormSubmission(formElement, onSuccess) {
 
         if(typeof onSuccess === 'function') {
             onSuccess(title, desc)
+            addProjectToSidebar(title)
+            
         }
+
     })
 }
+
