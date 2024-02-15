@@ -39,9 +39,7 @@ body {
     background-color: beige;
 }
 
-.content {
-    background-color: blueviolet;
-}
+
 
 .header {
     display: grid;
