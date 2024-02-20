@@ -49,7 +49,7 @@ export function addProjectToSidebar (projectName) {
     const projectBtnLI = document.createElement('li');
     const projectBtn = document.createElement('button');
     projectBtn.textContent = projectName;
-    projectBtn.className = `${projectName}-button`;
+    projectBtn.className = `${projectName}-side`;
     projectBtn.onclick = () => {
         console.log(`Project ${projectName} clicked`);
     }

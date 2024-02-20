@@ -26,6 +26,11 @@ export default function buildDOM() {
 function createHeader() {
     const header = document.createElement('div');
     header.className = 'header';
+
+    const h1 = document.createElement('h1');
+    h1.textContent = 'TASK MASTER'
+
+    header.appendChild(h1)
     return header;
 }
 //create content

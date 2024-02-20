@@ -8,7 +8,7 @@
 body {
     padding: 0;
     margin: 0;
-    color: red;
+    color: #E7DFDD;
     font-family: 'Raleway', sans-serif;
     height: 100vh;
 }
@@ -16,15 +16,15 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 7fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 9fr;
     height: 100%;
     
 }
 
 .sidebar {
     grid-row: 1 / 3;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.788);
+    
+    background-color: #0E0B16;
     display: grid;
     grid-template-rows: 1fr 6fr;
 }
@@ -35,6 +35,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    border: 1px solid white;
 }
 
 .sidebar ul li {
@@ -45,11 +46,15 @@ body {
 
 .sidebar ul li button {
     margin-top: 1em;
+    background-color: #4717F6;
+    color: #E7DFDD;
+    border-radius: 10px;
 }
 
 .projectSideDiv {
     text-align: center;
     overflow:hidden;
+    border: 1px solid white;
 }
 
 .projectSideDiv ul {
@@ -59,17 +64,17 @@ body {
 
 .header, .content{
     grid-column: 2 / 3;
-    border: 1px solid black;
+    background-color: #0E0B16;
+    border: 1px solid white;
 }
 
-.header {
-    background-color: beige;
-}
+
+
 
 
 
 .header {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+
     text-align: center;
 }
